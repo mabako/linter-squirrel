@@ -1,5 +1,5 @@
 {
-  "name": "linter-lua",
+  "name": "linter-squirrel",
   "linter-package": true,
   "activationEvents": [],
   "main": "./lib/init",
