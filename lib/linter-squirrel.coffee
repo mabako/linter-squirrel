@@ -1,33 +1,30 @@
 linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 
-class LinterLua extends Linter
+class LinterSquirrel extends Linter
   # The syntax that the linter handles. May be a string or
   # list/tuple of strings. Names should be all lowercase.
-  @syntax: 'source.lua'
+  @syntax: 'source.nut'
 
   # A string, list, tuple or callable that returns a string, list or tuple,
   # containing the command line (with arguments) used to lint.
-  cmd: 'luac -p'
+  cmd: 'sq-compiler'
 
-  linterName: 'luac'
+  linterName: 'squirrel'
 
   # A regex pattern used to extract information from the executable's output.
   regex:
-    '^.+?:.+?:' +
-    '(?<line>\\d+):\\s+' +
-    '(?<message>.+?' +
-    '(?:near (?<near>\'.+\')|$))'
+    'Error in (.*) on line (?<line>\\d+) column (?<col>\\d+): (?<message>.+)'
 
   errorStream: 'stderr'
 
   constructor: (editor) ->
     super(editor)
 
-    atom.config.observe 'linter-lua.luacExecutablePath', =>
-            @executablePath = atom.config.get 'linter-lua.luacExecutablePath'
+    atom.config.observe 'linter-squirrel.squirrelCompilerExecutablePath', =>
+            @executablePath = atom.config.get 'linter-squirrel.squirrelCompilerExecutablePath'
 
   destroy: ->
-    atom.config.unobserve 'linter-lua.luacExecutablePath'
+    atom.config.unobserve 'linter-squirrel.squirrelCompilerExecutablePath'
 
-module.exports = LinterLua
+module.exports = LinterSquirrel

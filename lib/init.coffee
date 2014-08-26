@@ -1,6 +1,6 @@
 module.exports =
   configDefaults:
-    luacExecutablePath: null
+    squirrelCompilerExecutablePath: null
 
   activate: ->
-    console.log 'activate linter-lua'
+    console.log 'activate linter-squirrel'
