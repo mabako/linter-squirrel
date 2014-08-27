@@ -1,6 +1,6 @@
 # linter-squirrel
 
-This package will lint your `.nut` files in Atom through [squirrel-compiler](https://github.com/mabako/squirrel-compiler) (>= v1.0.1, win32 only).
+This package will lint your `.nut` files in Atom through [squirrel-compiler](https://github.com/mabako/squirrel-compiler).
 **It will lint on edit and/or save**, so you'll see instantly if your code has errors.
 
 ## Linter Installation
