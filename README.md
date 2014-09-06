@@ -10,3 +10,6 @@ Before using this package, you must ensure that `squirrel-compiler` is installed
 
 * `$ apm install linter` (if you don't have [AtomLinter/Linter](https://github.com/AtomLinter/Linter) installed).
 * `$ apm install linter-squirrel`
+
+## Donation
+[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)
