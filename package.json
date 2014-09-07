@@ -7,7 +7,7 @@
   "description": "Lint Squirrel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AtomLinter/linter-squirrel"
+    "url": "https://github.com/mabako/linter-squirrel"
   },
   "license": "MIT",
   "engines": {
